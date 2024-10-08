@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(101, 163, 165);
+  color: aliceblue;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*-----------HEADER---------*/
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  
+  background: url('./img/photo-1725493279974-ab7bc4e53-canon.avif') no-repeat;  /*  Imagen en texto */
+  background-size: cover;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+/*------CONTENT----------*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+aside {
+
+  padding: 2em;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+}
+
+aside ul li {
+  margin-bottom: .4em;
+  padding: .4em .6em;
+  border: 1px solid transparent;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-family: 'Protest Strike', sans-serif;
+
+  cursor: pointer;
+}
+aside ul li:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-item.active {
+  background-color: black;
+  color: aliceblue;
+}
+
+main {
+  padding: 2em;
+}
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.content-item {
+  display: none;
+}
+
+
+/*-------------------ANIMATION----------------------------*/
+
+.content-item.visible {
+  display: block;
+
+  animation: revelar ease-out reverse forwards;
+  animation-duration: .3s;
+}
+
+@keyframes revelar{ 
+  0%{
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+  20%{
+    transform: translate(0, -30px);
+  }
+  100%{
+      opacity: 0;
+      transform: translate(0, 100px);
+  }
+}
+
+
+@media screen and (min-width:534px){    /*    RESPONSIVE       */
+
+  h1 {
+    font-size: 9rem;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  aside {
+    width: 25%;
+    height: 90%;
+  
+    padding: 2em;
+    border-right: 1px solid black;
+  }
+
+  aside ul{
+    flex-direction: column;
+  }
+
+  main {
+    padding: 2em 5em;
+    width: 75%;
+  }
+
+  p{
+    font-size: 2em;
+  }
+}
