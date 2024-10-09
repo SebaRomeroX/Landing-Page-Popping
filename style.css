@@ -113,10 +113,9 @@ p{
 }
 
 
-@media screen and (min-width:534px){    /*    RESPONSIVE       */
-
+@media screen and (min-width:634px){
   h1 {
-    font-size: 9rem;
+    font-size: 5rem;
   }
 
   .container {
@@ -127,7 +126,7 @@ p{
     width: 25%;
     height: 90%;
   
-    padding: 2em;
+    padding: .2em;
     border-right: 1px solid black;
   }
 
@@ -136,11 +135,31 @@ p{
   }
 
   main {
-    padding: 2em 5em;
+    padding: 0 1.4em;
     width: 75%;
+  }
+
+  p{
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width:1034px){    /*    RESPONSIVE       */
+
+  h1 {
+    font-size: 9rem;
+  }
+
+  aside {
+    padding: 2em;
+  }
+
+  main {
+    padding: 2em 5em;
   }
 
   p{
     font-size: 2em;
   }
 }
+
