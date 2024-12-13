@@ -45,7 +45,7 @@ h1 {
 
 aside {
 
-  padding: 2em;
+  padding: 0 .8em;
 }
 
 aside ul {
@@ -54,10 +54,9 @@ aside ul {
 }
 
 aside ul li {
-  margin-bottom: .4em;
-  padding: .4em .6em;
+  padding: .1em .4em;
   border: 1px solid transparent;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 900;
   letter-spacing: 0.1em;
   font-family: 'Protest Strike', sans-serif;
@@ -132,6 +131,12 @@ p{
 
   aside ul{
     flex-direction: column;
+  }
+
+  aside ul li {
+    margin-bottom: .4em;
+    padding: .4em .6em;
+    font-size: 2em;
   }
 
   main {
